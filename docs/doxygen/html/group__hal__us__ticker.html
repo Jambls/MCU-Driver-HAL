@@ -100,10 +100,10 @@ Modules</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gaafacedcf0b73124e24cbdfe5df976a5e"><td class="memItemLeft" align="right" valign="top">ticker_irq_handler_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__hal__us__ticker.html#gaafacedcf0b73124e24cbdfe5df976a5e">set_us_ticker_irq_handler</a> (ticker_irq_handler_type <a class="el" href="group__hal__ticker.html#gacf3e1d28c9905fe0c2c00e25d185cd65">ticker_irq_handler</a>)</td></tr>
+<tr class="memitem:gaafacedcf0b73124e24cbdfe5df976a5e"><td class="memItemLeft" align="right" valign="top">ticker_irq_handler_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__hal__us__ticker.html#gaafacedcf0b73124e24cbdfe5df976a5e">set_us_ticker_irq_handler</a> (ticker_irq_handler_type ticker_irq_handler)</td></tr>
 <tr class="memdesc:gaafacedcf0b73124e24cbdfe5df976a5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set ticker IRQ handler.  <a href="group__hal__us__ticker.html#gaafacedcf0b73124e24cbdfe5df976a5e">More...</a><br /></td></tr>
 <tr class="separator:gaafacedcf0b73124e24cbdfe5df976a5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga47032859c2f9f4b8591abc99ce332380"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structticker__data__t.html">ticker_data_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__hal__us__ticker.html#ga47032859c2f9f4b8591abc99ce332380">get_us_ticker_data</a> (void)</td></tr>
+<tr class="memitem:ga47032859c2f9f4b8591abc99ce332380"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structticker__data__s.html">ticker_data_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__hal__us__ticker.html#ga47032859c2f9f4b8591abc99ce332380">get_us_ticker_data</a> (void)</td></tr>
 <tr class="memdesc:ga47032859c2f9f4b8591abc99ce332380"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get ticker's data.  <a href="group__hal__us__ticker.html#ga47032859c2f9f4b8591abc99ce332380">More...</a><br /></td></tr>
 <tr class="separator:ga47032859c2f9f4b8591abc99ce332380"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga52d2b2c47d792442573e34403f9a10b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__hal__us__ticker.html#ga52d2b2c47d792442573e34403f9a10b1">us_ticker_irq_handler</a> (void)</td></tr>
@@ -164,7 +164,7 @@ Compile-time optimization macros</h1>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="structticker__data__t.html">ticker_data_t</a>* get_us_ticker_data </td>
+          <td class="memname">const <a class="el" href="structticker__data__s.html">ticker_data_t</a>* get_us_ticker_data </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -202,7 +202,7 @@ Compile-time optimization macros</h1>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>previous ticker IRQ handler</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>by default IRQ handler is set to <a class="el" href="group__hal__ticker.html#gacf3e1d28c9905fe0c2c00e25d185cd65" title="IRQ handler that goes through the events to trigger overdue events.">ticker_irq_handler</a> </dd>
+<dl class="section note"><dt>Note</dt><dd>by default IRQ handler is set to ::ticker_irq_handler </dd>
 <dd>
 this function is primarily for testing purposes and it's not required part of HAL implementation </dd></dl>
 
@@ -456,9 +456,7 @@ this function is primarily for testing purposes and it's not required part of HA
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>no special handling needs to be done for times in the past as the common timer code will detect this and call <a class="el" href="group__hal__us__ticker.html#ga5aee5a861998924256e35e3662802c17" title="Set pending interrupt that should be fired right away.">us_ticker_fire_interrupt()</a> if this is the case</dd>
-<dd>
-calling this function with timestamp of more than the supported number of bits returned by <a class="el" href="group__hal__us__ticker.html#ga6693925c35a3cce2c4e5e592b5f631fc" title="Get frequency and counter bits of this ticker.">us_ticker_get_info</a> results in undefined behavior.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>calling this function with timestamp of more than the supported number of bits returned by <a class="el" href="group__hal__us__ticker.html#ga6693925c35a3cce2c4e5e592b5f631fc" title="Get frequency and counter bits of this ticker.">us_ticker_get_info</a> results in undefined behavior.</dd></dl>
 <p>Pseudo Code: </p><div class="fragment"><div class="line"><span class="keywordtype">void</span> <a class="code" href="group__hal__us__ticker.html#gae7b69978fcf8ce8054597c87072896ce">us_ticker_set_interrupt</a>(<a class="code" href="group__hal.html#gaf889abd7a487d58af4c374658afc1dd3">timestamp_t</a> timestamp)</div>
 <div class="line">{</div>
 <div class="line">    TIMER_COMPARE = timestamp;</div>
@@ -473,9 +471,9 @@ calling this function with timestamp of more than the supported number of bits r
 <div class="ttc" id="agroup__hal__us__ticker_html_ga75e46157b1bbfe4f5594e33b49ff2605"><div class="ttname"><a href="group__hal__us__ticker.html#ga75e46157b1bbfe4f5594e33b49ff2605">us_ticker_disable_interrupt</a></div><div class="ttdeci">void us_ticker_disable_interrupt(void)</div><div class="ttdoc">Disable us ticker interrupt.</div></div>
 <div class="ttc" id="agroup__hal__us__ticker_html_ga46439f1db7a3f469c3bd4e32cabc01cb"><div class="ttname"><a href="group__hal__us__ticker.html#ga46439f1db7a3f469c3bd4e32cabc01cb">us_ticker_read</a></div><div class="ttdeci">uint32_t() us_ticker_read(void)</div><div class="ttdoc">Read the current counter.</div></div>
 <div class="ttc" id="agroup__hal__us__ticker_html_ga52d2b2c47d792442573e34403f9a10b1"><div class="ttname"><a href="group__hal__us__ticker.html#ga52d2b2c47d792442573e34403f9a10b1">us_ticker_irq_handler</a></div><div class="ttdeci">void us_ticker_irq_handler(void)</div><div class="ttdoc">The wrapper for ticker_irq_handler, to pass us ticker's data.</div></div>
-<div class="ttc" id="astructticker__info__t_html"><div class="ttname"><a href="structticker__info__t.html">ticker_info_t</a></div><div class="ttdoc">Information about the ticker implementation.</div><div class="ttdef"><b>Definition:</b> <a href="ticker__api_8h_source.html#l00053">ticker_api.h:53</a></div></div>
+<div class="ttc" id="astructticker__info__t_html"><div class="ttname"><a href="structticker__info__t.html">ticker_info_t</a></div><div class="ttdoc">Information about the ticker implementation.</div><div class="ttdef"><b>Definition:</b> <a href="ticker__types_8h_source.html#l00036">ticker_types.h:36</a></div></div>
 <div class="ttc" id="agroup__hal__us__ticker_html_ga7723545c3dfdb2fad600e89b28f363ed"><div class="ttname"><a href="group__hal__us__ticker.html#ga7723545c3dfdb2fad600e89b28f363ed">us_ticker_free</a></div><div class="ttdeci">void us_ticker_free(void)</div><div class="ttdoc">Deinitialize the us ticker.</div></div>
-<div class="ttc" id="agroup__hal_html_gaf889abd7a487d58af4c374658afc1dd3"><div class="ttname"><a href="group__hal.html#gaf889abd7a487d58af4c374658afc1dd3">timestamp_t</a></div><div class="ttdeci">uint32_t timestamp_t</div><div class="ttdoc">Legacy format representing a timestamp in us.</div><div class="ttdef"><b>Definition:</b> <a href="ticker__api_8h_source.html#l00033">ticker_api.h:33</a></div></div>
+<div class="ttc" id="agroup__hal_html_gaf889abd7a487d58af4c374658afc1dd3"><div class="ttname"><a href="group__hal.html#gaf889abd7a487d58af4c374658afc1dd3">timestamp_t</a></div><div class="ttdeci">uint32_t timestamp_t</div><div class="ttdoc">Legacy format representing a timestamp in us.</div><div class="ttdef"><b>Definition:</b> <a href="ticker__types_8h_source.html#l00032">ticker_types.h:32</a></div></div>
 <div class="ttc" id="agroup__hal__us__ticker_html_ga829955267433ca8d04ac71f4e89c0404"><div class="ttname"><a href="group__hal__us__ticker.html#ga829955267433ca8d04ac71f4e89c0404">us_ticker_init</a></div><div class="ttdeci">void us_ticker_init(void)</div><div class="ttdoc">Initialize the ticker.</div></div>
 <div class="ttc" id="agroup__hal__us__ticker_html_gae7b69978fcf8ce8054597c87072896ce"><div class="ttname"><a href="group__hal__us__ticker.html#gae7b69978fcf8ce8054597c87072896ce">us_ticker_set_interrupt</a></div><div class="ttdeci">void us_ticker_set_interrupt(timestamp_t timestamp)</div><div class="ttdoc">Set interrupt for specified timestamp.</div></div>
 <div class="ttc" id="agroup__hal__us__ticker_html_ga6693925c35a3cce2c4e5e592b5f631fc"><div class="ttname"><a href="group__hal__us__ticker.html#ga6693925c35a3cce2c4e5e592b5f631fc">us_ticker_get_info</a></div><div class="ttdeci">const ticker_info_t * us_ticker_get_info(void)</div><div class="ttdoc">Get frequency and counter bits of this ticker.</div></div>
@@ -483,7 +481,7 @@ calling this function with timestamp of more than the supported number of bits r
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Jun 23 2021 11:10:00 for MCU-Driver-HAL by
+    <li class="footer">Generated on Thu Jul 8 2021 14:39:24 for MCU-Driver-HAL by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

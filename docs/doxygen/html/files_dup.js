@@ -38,7 +38,7 @@ var files_dup =
     [ "sleep_api.h", "sleep__api_8h_source.html", null ],
     [ "spi_api.h", "spi__api_8h_source.html", null ],
     [ "static_pinmap.h", "static__pinmap_8h_source.html", null ],
-    [ "ticker_api.h", "ticker__api_8h_source.html", null ],
+    [ "ticker_types.h", "ticker__types_8h_source.html", null ],
     [ "trng_api.h", "trng__api_8h_source.html", null ],
     [ "us_ticker_api.h", "us__ticker__api_8h_source.html", null ],
     [ "watchdog_api.h", "watchdog__api_8h_source.html", null ]

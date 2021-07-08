@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['get_5finfo_1287',['get_info',['../structticker__interface__t.html#a4b8704c740acf958ac1c54df32ca84c3',1,'ticker_interface_t']]]
+  ['hw_5fcs_5fhandle_1237',['hw_cs_handle',['../structspi__capabilities__t.html#ac1085d360f6d80cd47282328bd81235a',1,'spi_capabilities_t']]]
 ];

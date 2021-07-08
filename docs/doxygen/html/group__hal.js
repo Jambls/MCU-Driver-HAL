@@ -22,7 +22,6 @@ var group__hal =
     [ "SPI Configuration Functions", "group__hal___general_s_p_i.html", "group__hal___general_s_p_i" ],
     [ "Synchronous SPI Hardware Abstraction Layer", "group___synch_s_p_i.html", "group___synch_s_p_i" ],
     [ "Asynchronous SPI Hardware Abstraction Layer", "group___asynch_s_p_i.html", "group___asynch_s_p_i" ],
-    [ "Ticker HAL functions", "group__hal__ticker.html", "group__hal__ticker" ],
     [ "TRNG hal functions", "group__hal__trng.html", "group__hal__trng" ],
     [ "Microsecond Ticker", "group__hal__us__ticker.html", "group__hal__us__ticker" ],
     [ "Watchdog HAL API", "group__hal__watchdog.html", "group__hal__watchdog" ],
@@ -72,11 +71,6 @@ var group__hal =
       [ "tx_rx_buffers_equal_length", "structspi__capabilities__t.html#a02ab4b9502323477971b183b7cc9b874", null ],
       [ "word_length", "structspi__capabilities__t.html#a501da8d41c9e621bce80e32045061437", null ]
     ] ],
-    [ "ticker_event_s", "structticker__event__s.html", [
-      [ "id", "structticker__event__s.html#abaabdc509cdaba7df9f56c6c76f3ae19", null ],
-      [ "next", "structticker__event__s.html#a064f2566b1d3fa9c0b6cc9a09b43412f", null ],
-      [ "timestamp", "structticker__event__s.html#a1cee1570cce1a471a148008a85a63890", null ]
-    ] ],
     [ "ticker_info_t", "structticker__info__t.html", [
       [ "bits", "structticker__info__t.html#afeda3c90a255fe7e4b1e99b4308cce2c", null ],
       [ "frequency", "structticker__info__t.html#ab632fb0b4d5156ea4df0b1e15410e913", null ]
@@ -92,26 +86,8 @@ var group__hal =
       [ "runs_in_deep_sleep", "structticker__interface__t.html#a95ba134c7aa2730a2bd42d9f4cb493a2", null ],
       [ "set_interrupt", "structticker__interface__t.html#abac1c5f06750a959bb5d9d146479b71b", null ]
     ] ],
-    [ "ticker_event_queue_t", "structticker__event__queue__t.html", [
-      [ "bitmask", "structticker__event__queue__t.html#a9977f11e12ad47bc62ee74fda71e777a", null ],
-      [ "dispatching", "structticker__event__queue__t.html#aa928397795835ce4ee78f2bc8029ea1e", null ],
-      [ "event_handler", "structticker__event__queue__t.html#abadbb2e2c2f64499c355a34c08b9c9a7", null ],
-      [ "head", "structticker__event__queue__t.html#a3a7f9e6d621693e134b58294804c165c", null ],
-      [ "initialized", "structticker__event__queue__t.html#aedeffc7d23da25d52b9a50045189fe2b", null ],
-      [ "max_delta", "structticker__event__queue__t.html#ab5546cee6d235daa91edf4aa1200e583", null ],
-      [ "max_delta_us", "structticker__event__queue__t.html#a91cc30da038f1b20294a1aff18d8a8df", null ],
-      [ "period_den", "structticker__event__queue__t.html#a862257082790ad350cb6237eca38e581", null ],
-      [ "period_den_shifts", "structticker__event__queue__t.html#a050ebbb3bc7fa320ec2c32a29fbe2d9c", null ],
-      [ "period_num", "structticker__event__queue__t.html#a37cadf165907f448b54e41dc367e4831", null ],
-      [ "period_num_shifts", "structticker__event__queue__t.html#a61675e2918833e9447253367555ddac6", null ],
-      [ "present_time", "structticker__event__queue__t.html#aaeb61106a0fbed1b4f3648c62a01f282", null ],
-      [ "suspended", "structticker__event__queue__t.html#ae0ed5063d998fba626c0783a36391f3c", null ],
-      [ "tick_last_read", "structticker__event__queue__t.html#abd72c3e7faf55f895d94c52f18391591", null ],
-      [ "tick_remainder", "structticker__event__queue__t.html#a401c5a98cdd1b75c9da63a02d40cb154", null ]
-    ] ],
-    [ "ticker_data_t", "structticker__data__t.html", [
-      [ "interface", "structticker__data__t.html#a75babe50893e40aee513d47787afd264", null ],
-      [ "queue", "structticker__data__t.html#a2ed6f5a80b1d1cd5d74c417f7afbfd9a", null ]
+    [ "ticker_data_s", "structticker__data__s.html", [
+      [ "interface", "structticker__data__s.html#a75babe50893e40aee513d47787afd264", null ]
     ] ],
     [ "buffer_s", "structbuffer__s.html", [
       [ "buffer", "structbuffer__s.html#a368f7094dc38acca20612bbb392552f4", null ],
@@ -125,10 +101,8 @@ var group__hal =
     [ "dac_t", "group__hal.html#ga125c25ad6ab46870e3c0a3310cae2a2e", null ],
     [ "port_t", "group__hal.html#gaed62f3ea86da10b6ac0aa7fa2e599aff", null ],
     [ "pwmout_t", "group__hal.html#ga6609ec508d3754cc47e6b771cbdca74d", null ],
-    [ "ticker_event_t", "group__hal.html#ga72ca2ef9e5e60ec062b314f8f8e5cf47", null ],
     [ "timestamp_t", "group__hal.html#gaf889abd7a487d58af4c374658afc1dd3", null ],
     [ "trng_t", "group__hal.html#gae0cd96de14996dac6d3b5f2d83f93c07", null ],
-    [ "us_timestamp_t", "group__hal.html#gafbbb0a24d16addef2bc749c63e2a7f0f", null ],
     [ "CANFormat", "group__hal.html#ga3728669b02b962d5e84c37d4587189b2", null ],
     [ "CANType", "group__hal.html#ga2fb469bfd68de3955e9552b34cb86bcd", null ],
     [ "crc_polynomial", "group__hal.html#gaac29aaabcf8b2e9348a5a2a730fdf46a", [

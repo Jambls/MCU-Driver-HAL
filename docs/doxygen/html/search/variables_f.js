@@ -1,20 +1,4 @@
 var searchData=
 [
-  ['serial_1317',['serial',['../structserial__t.html#af5335ae3808e461311502637c9e7f446',1,'serial_t']]],
-  ['set_5finterrupt_1318',['set_interrupt',['../structticker__interface__t.html#abac1c5f06750a959bb5d9d146479b71b',1,'ticker_interface_t']]],
-  ['size_1319',['size',['../structqspi__command.html#add54a61b2af650eec26f46374de8c0da',1,'qspi_command::size()'],['../structqspi__command.html#a08f66a3a65270aca91de604cfdeec8b2',1,'qspi_command::size()']]],
-  ['slave_5fdelay_5fbetween_5fsymbols_5fns_1320',['slave_delay_between_symbols_ns',['../structspi__capabilities__t.html#a08a00775093b0809d17412647fc8ffaf',1,'spi_capabilities_t']]],
-  ['spi_1321',['spi',['../structspi__t.html#a68630994950ee26c66ebd97d38004c49',1,'spi_t']]],
-  ['st_5fatime_1322',['st_atime',['../structstat.html#a830610c1aa2efb228f4c93752fac5c20',1,'stat']]],
-  ['st_5fctime_1323',['st_ctime',['../structstat.html#a4e5382a4b12f6f9396a019b5d6e3e0ed',1,'stat']]],
-  ['st_5fdev_1324',['st_dev',['../structstat.html#a38914c334b6acaa9e0e94c9d28d590e6',1,'stat']]],
-  ['st_5fgid_1325',['st_gid',['../structstat.html#a77f5167746caec57eabf971231282e45',1,'stat']]],
-  ['st_5fino_1326',['st_ino',['../structstat.html#ac4a6c013b12dad2fb1bce6bd99d66f6f',1,'stat']]],
-  ['st_5fmode_1327',['st_mode',['../structstat.html#aee5b542fc82f176aad79ec67feb729c8',1,'stat']]],
-  ['st_5fmtime_1328',['st_mtime',['../structstat.html#aed5cb4c6ec394fc6629432f91d3719f9',1,'stat']]],
-  ['st_5fnlink_1329',['st_nlink',['../structstat.html#aaf71fe94712c34e733e71a11933d2794',1,'stat']]],
-  ['st_5fsize_1330',['st_size',['../structstat.html#a4de8e8d5f90f6deec5e71e2105ee93f9',1,'stat']]],
-  ['st_5fuid_1331',['st_uid',['../structstat.html#aaa7d1c91bc417749646433fe7b0c4214',1,'stat']]],
-  ['support_5fslave_5fmode_1332',['support_slave_mode',['../structspi__capabilities__t.html#ae1f633c0d63b428f1c784bfa143c69b6',1,'spi_capabilities_t']]],
-  ['suspended_1333',['suspended',['../structticker__event__queue__t.html#ae0ed5063d998fba626c0783a36391f3c',1,'ticker_event_queue_t']]]
+  ['value_1274',['value',['../structqspi__command.html#a638e4503e0ae6ce655b7ad2e17e8f0ad',1,'qspi_command::value()'],['../structqspi__command.html#ae7f66047e6e39ba2bb6af8b95f00d1dd',1,'qspi_command::value()']]]
 ];
